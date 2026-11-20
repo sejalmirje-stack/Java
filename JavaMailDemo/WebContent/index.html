@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaMail API - Send Email</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background: #fff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            max-width: 550px;
+            width: 100%;
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        input[type="email"], input[type="text"], input[type="password"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            height: 110px;
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .credentials-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #cbd5e1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-bottom: 18px;
+        }
+        .credentials-box summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JavaMail API Demo (Experiment 5)</h2>
+        <form action="sendEmail" method="post">
+            <details class="credentials-box">
+                <summary>Sender SMTP Credentials (Optional / Gmail)</summary>
+                <div style="margin-top: 12px;">
+                    <div class="form-group">
+                        <label for="from">Sender Email:</label>
+                        <input type="email" id="from" name="from" placeholder="your-email@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="appPassword">Sender App Password (16-char):</label>
+                        <input type="password" id="appPassword" name="appPassword" placeholder="e.g. abcd efgh ijkl mnop">
+                    </div>
+                </div>
+            </details>
+
+            <div class="form-group">
+                <label for="to">To (Recipient Email):</label>
+                <input type="email" id="to" name="to" required placeholder="recipient@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required placeholder="Test Email from Java Web App">
+            </div>
+
+            <div class="form-group">
+                <label for="body">Message:</label>
+                <textarea id="body" name="body" required placeholder="Hello,\n\nThis is a test email sent using JavaMail API."></textarea>
+            </div>
+
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+</body>
+</html>
