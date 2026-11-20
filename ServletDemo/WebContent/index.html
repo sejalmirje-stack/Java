@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servlet Demo - Home</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background: #fff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .card {
+            background: #eef2f7;
+            padding: 16px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ServletDemo Application</h1>
+        <p>This dynamic web application implements a Java Servlet to handle HTTP requests.</p>
+        
+        <div class="card">
+            <h3>Test HTTP GET Request:</h3>
+            <p>Click below to send a GET request to <code>/hello</code>:</p>
+            <p><a class="btn" href="hello">Send GET Request to /hello</a></p>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <h3>Direct URL:</h3>
+            <p><code>http://localhost:8080/ServletDemo/hello</code></p>
+        </div>
+    </div>
+</body>
+</html>
